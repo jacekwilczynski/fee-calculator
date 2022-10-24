@@ -1,0 +1,4 @@
+suites:
+    acme_suite:
+        namespace: PragmaGoTech\Interview
+        psr4_prefix: PragmaGoTech\Interview

@@ -1,6 +1,13 @@
 PragmaGO.TECH Interview Test - Fee Calculation
 =====
 
+## Running the app / tests using Docker
+```sh
+./run.sh      # if you want to be prompted for the loan amount
+./run.sh 1234 # if you want to specify the loan amount right away
+./run.sh test # if you want to run Behat & phpspec tests
+```
+
 ## Background
 
 This test is designed to evaluate your problem solving approach and your engineering ability. Design your solution in a way that shows your knowledge of OOP concepts, SOLID principles, design patterns, clean and extensible architecture.
@@ -24,13 +31,6 @@ Example inputs/outputs:
 |-------------|--------|
 |6500 PLN     |130 PLN |
 |19,250 PLN   |385 PLN |
-
-# Installation
-A database or any other external dependency is not required for this test.
-
-```bash
-composer install
-```
 
 # Example
 

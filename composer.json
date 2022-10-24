@@ -7,9 +7,23 @@
             "email": "piotr.scibor@pragmago.tech"
         }
     ],
+    "require": {
+        "brick/money": "^0.7.0",
+        "ext-readline": "*"
+    },
+    "require-dev": {
+        "behat/behat": "^3.11",
+        "phpspec/phpspec": "^7.2"
+    },
     "autoload": {
         "psr-4": {
             "PragmaGoTech\\Interview\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "spec\\PragmaGoTech\\Interview\\": "spec/",
+            "PragmaGoTech\\Interview\\TestUtil\\": "testutil/"
         }
     }
 }
