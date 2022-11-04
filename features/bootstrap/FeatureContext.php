@@ -5,8 +5,11 @@ declare(strict_types=1);
 use Behat\Behat\Context\Context;
 use Behat\Gherkin\Node\TableNode;
 use Brick\Money\Money;
-use PragmaGoTech\Interview\FeeCalculator;
+use PragmaGoTech\Interview\Application\Contract\FeeCalculator;
+use PragmaGoTech\Interview\Application\Contract\Repository\BreakpointRepository;
 use PragmaGoTech\Interview\Infrastructure\InMemoryBreakpointRepository;
+use PragmaGoTech\Interview\Infrastructure\ServiceConfig;
+use PragmaGoTech\Interview\Infrastructure\ServiceLocator;
 use PragmaGoTech\Interview\Model\Breakpoint;
 use PragmaGoTech\Interview\Model\LoanProposal;
 use PragmaGoTech\Interview\TestUtil\Test;
@@ -19,8 +22,9 @@ class FeatureContext implements Context
 
     public function __construct()
     {
-        $this->breakpointRepository = new InMemoryBreakpointRepository();
-        $this->feeCalculator = new FeeCalculator($this->breakpointRepository);
+        $serviceLocator = ServiceConfig::applyTo(new ServiceLocator());
+        $this->breakpointRepository = $serviceLocator->get(BreakpointRepository::class);
+        $this->feeCalculator = $serviceLocator->get(FeeCalculator::class);
     }
 
     /**

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace spec\PragmaGoTech\Interview\Infrastructure;
 
 use PhpSpec\ObjectBehavior;
-use PragmaGoTech\Interview\Model\BreakpointRepository;
+use PragmaGoTech\Interview\Application\Contract\Repository\BreakpointRepository;
 use PragmaGoTech\Interview\TestUtil\Test;
 
 class InMemoryBreakpointRepositorySpec extends ObjectBehavior

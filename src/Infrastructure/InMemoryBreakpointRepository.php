@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace PragmaGoTech\Interview\Infrastructure;
 
 use Brick\Money\Money;
+use PragmaGoTech\Interview\Application\Contract\Repository\BreakpointRepository;
 use PragmaGoTech\Interview\Model\Breakpoint;
-use PragmaGoTech\Interview\Model\BreakpointRepository;
 
 class InMemoryBreakpointRepository implements BreakpointRepository
 {
